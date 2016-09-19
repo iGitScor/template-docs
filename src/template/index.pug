@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content='Documentation resources')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0')
+    title Documentation
+    // Page styles
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&lang=en')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    link(rel='stylesheet', href='http://code.getmdl.io/1.2.1/material.cyan-pink.min.css')
+    link(rel='stylesheet', href='css/index.min.css')
+  body
+    header
+      .mdl-layout__header-row(role='navigation')
+        a.mdl-layout-title(href='/', title='Home') iScor
+    .demo-blog.mdl-layout.mdl-js-layout.has-drawer.is-upgraded
+      main.mdl-layout__content
+        .demo-blog__posts.mdl-grid
+          include ../../template/index.pug
+        footer.mdl-mini-footer
+          .mdl-mini-footer--left-section
+            a.mdl-mini-footer--social-btn.social-btn.social-btn__twitter(href='https://twitter.com/iTweetScor', target='_blank')
+              span.visuallyhidden Twitter
+    script(src='http://code.getmdl.io/1.2.1/material.min.js')
