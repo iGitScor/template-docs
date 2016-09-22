@@ -1,13 +1,26 @@
 {
   "name": "template-docs",
   "version": "1.0.0",
-  "description": "",
+  "license": "MIT",
+  "description": "Template for documentation generation",
+  "keywords": [
+    "documentation",
+    "generation",
+    "gulp",
+    "submodule"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:iGitScor/template-docs.git"
+  },
+  "bugs": "https://github.com/iGitScor/template-docs/issues",
+  "author": "iGitScor <sebastien.correaud@gmail.com> (http://iscor.me)",
+  "contributors": [
+    "iGitScor <sebastien.correaud@gmail.com> (http://iscor.me)"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.16.0",
     "gulp": "^3.9.1",
@@ -16,5 +29,8 @@
     "gulp-pug": "^3.0.4",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2"
+  },
+  "engines": {
+    "node": ">=0.12"
   }
 }
