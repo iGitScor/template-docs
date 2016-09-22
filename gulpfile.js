@@ -96,7 +96,7 @@ gulp.task(
     'tpl',
     'style',
     'img',
-  ], function (cb) {
+  ], function (callback) {
     callback();
   }
 );
@@ -118,7 +118,10 @@ gulp.task(
 //Watch task
 gulp.task(
   'watch',
-  ['serve'],
+  [
+    'generate',
+    'serve',
+  ],
   function watchMode() {
     gulp.watch(path.src.allStyles, ['style']);
     gulp.watch(path.src.allTemplates, ['tpl']);
