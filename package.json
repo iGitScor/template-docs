@@ -12,6 +12,7 @@
     "browser-sync": "^2.16.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.12",
+    "gulp-imagemin": "^3.0.3",
     "gulp-pug": "^3.0.4",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2"

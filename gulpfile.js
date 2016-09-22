@@ -4,6 +4,7 @@ var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
+var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
@@ -15,12 +16,14 @@ var path = {
     allStyles: './src/style/**/*.scss',
     tpl: './src/template/index.pug',
     allTemplates: './src/template/**/*.pug',
+    allImg: './src/style/img/*.*',
   },
   dist: {
     html: '../*.html',
     htmlDir: '../',
     css: '../css/*.css',
     cssDir: '../css/',
+    imgDir: '../css/img/',
   },
 };
 
@@ -65,16 +68,24 @@ gulp.task(
   function styleIt() {
     gulp.src(path.src.style)
       .pipe(sass().on('error', sass.logError))
-      .pipe(cleanCSS({ debug: true }, function clean(details) {
-          logInfo(`File ${details.name}`);
-          logInfo(`\t-> ${details.stats.originalSize} (original)`);
-          logInfo(`\t-> ${details.stats.minifiedSize} (minified)`);
-        }
-      ))
+      .pipe(cleanCSS({ debug: false }))
       .pipe(rename({
         suffix: '.min',
       }))
       .pipe(gulp.dest(path.dist.cssDir));
+  }
+);
+
+//Image task
+gulp.task(
+  'img',
+  function () {
+    return gulp.src(path.src.allImg)
+      .pipe(imagemin({
+        progressive: true,
+        verbose: false,
+      }))
+      .pipe(gulp.dest(path.dist.imgDir));
   }
 );
 
