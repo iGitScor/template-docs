@@ -89,6 +89,18 @@ gulp.task(
   }
 );
 
+//Generation task
+gulp.task(
+  'generate',
+  [
+    'tpl',
+    'style',
+    'img',
+  ], function (cb) {
+    callback();
+  }
+);
+
 //Serve task
 gulp.task(
   'serve',
