@@ -28,7 +28,8 @@
     "gulp-imagemin": "^3.0.3",
     "gulp-pug": "^3.0.4",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "jstransformer-marked": "^1.0.1"
   },
   "engines": {
     "node": ">=0.12"
