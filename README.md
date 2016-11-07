@@ -1,4 +1,4 @@
-# template-docs
+# Template docs
 
 A templating submodule tool
 
@@ -10,7 +10,7 @@ A templating submodule tool
 
 `git submodule add git@github.com:iGitScor/template-docs.git docs/template-docs`
 
-_You can change source directory_
+_You can change source directory (e.g. docs/template-docs) in all commands_
 
 ```make
 update:
