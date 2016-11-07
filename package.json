@@ -1,6 +1,6 @@
 {
   "name": "template-docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Template for documentation generation",
   "keywords": [
@@ -19,8 +19,9 @@
     "iGitScor <sebastien.correaud@gmail.com> (http://iscor.me)"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.16.0",
     "gulp": "^3.9.1",
