@@ -19,7 +19,7 @@
     "iGitScor <sebastien.correaud@gmail.com> (http://iscor.me)"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "gulp test"
   },
   "dependencies": {},
   "devDependencies": {
@@ -28,6 +28,7 @@
     "gulp-clean-css": "^2.0.12",
     "gulp-imagemin": "^3.0.3",
     "gulp-pug": "^3.0.4",
+    "gulp-pug-lint": "^0.1.6",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "jstransformer-marked": "^1.0.1"

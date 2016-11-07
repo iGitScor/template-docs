@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
+var puglint = require('gulp-pug-lint');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
@@ -52,7 +53,7 @@ function logSuccess(text) {
   );
 }
 
-//Template task
+// Template task
 gulp.task(
   'tpl',
   function markupIt() {
@@ -62,7 +63,7 @@ gulp.task(
   }
 );
 
-//Sass task
+// Sass task
 gulp.task(
   'style',
   function styleIt() {
@@ -76,7 +77,7 @@ gulp.task(
   }
 );
 
-//Image task
+// Image task
 gulp.task(
   'img',
   function () {
@@ -89,7 +90,7 @@ gulp.task(
   }
 );
 
-//Generation task
+// Generation task
 gulp.task(
   'generate',
   [
@@ -101,7 +102,7 @@ gulp.task(
   }
 );
 
-//Serve task
+// Serve task
 gulp.task(
   'serve',
   function () {
@@ -112,6 +113,27 @@ gulp.task(
         },
       }
     );
+  }
+);
+
+// Test task
+gulp.task(
+  'test',
+  [
+    'tpl:lint',
+  ],
+  function test(callback) {
+    callback();
+  }
+);
+
+// Template lint task
+gulp.task(
+  'tpl:lint',
+  function () {
+    gulp
+      .src(path.src.allTemplates)
+      .pipe(puglint());
   }
 );
 
