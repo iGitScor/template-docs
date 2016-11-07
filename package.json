@@ -10,8 +10,8 @@
     "submodule"
   ],
   "repository": {
-    "type": "git",
-    "url": "git@github.com:iGitScor/template-docs.git"
+    "url": "git@github.com:iGitScor/template-docs.git",
+    "type": "git"
   },
   "bugs": "https://github.com/iGitScor/template-docs/issues",
   "author": "iGitScor <sebastien.correaud@gmail.com> (http://iscor.me)",
