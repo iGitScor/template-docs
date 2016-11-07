@@ -2,6 +2,10 @@
 
 A templating submodule tool
 
+[![Build Status](https://travis-ci.org/iGitScor/template-docs.svg?branch=master)](https://travis-ci.org/iGitScor/template-docs)
+[![dependencies Status](https://david-dm.org/iGitScor/template-docs/status.svg)](https://david-dm.org/iGitScor/template-docs)
+[![devDependencies Status](https://david-dm.org/iGitScor/template-docs/dev-status.svg)](https://david-dm.org/iGitScor/template-docs?type=dev)
+
 ## Use submodule
 
 `git submodule add git@github.com:iGitScor/template-docs.git docs/template-docs`
